@@ -1,0 +1,53 @@
+# gitlab
+Host 120.236.247.203
+    HostName 120.236.247.203
+    User root
+    Port 21600
+
+
+Host tiaoban
+    HostName isrc.iscas.ac.cn
+	Port 5022
+	User weijia
+	
+Host server
+    HostName 192.168.7.186
+	Port 22
+	User gg
+	
+	ProxyCommand ssh tiaoban -W %h:%p
+ 
+ 	
+Host A30
+    HostName 192.168.8.58
+	Port 22
+	User liweijia
+	
+	ProxyCommand ssh tiaoban -W %h:%p
+
+Host A30-in
+    HostName 192.168.8.58
+	Port 22
+	User liweijia
+
+Host A30-in-cheng
+    HostName 192.168.8.58
+	Port 22
+	User chenglimin
+
+ Host V100
+    HostName 192.168.8.156
+	Port 22
+	User wangxinyu
+	
+	ProxyCommand ssh tiaoban -W %h:%p
+
+Host riscv
+    HostName 192.168.7.36
+	Port 22
+	User root
+
+Host xuniji
+    HostName 192.168.253.164
+	Port 22
+	User root
